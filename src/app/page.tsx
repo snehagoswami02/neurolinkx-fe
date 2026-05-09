@@ -3,14 +3,10 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div
-      style={{
-        background: "var(--color-primary)",
-        color: "white",
-        padding: "40px",
-      }}
-    >
-      TOKENS WORKING
-    </div>
+     <main className="p-10 max-w-md">
+      <input placeholder="Enter your email" />
+    </main>
+    
   );
+
 }

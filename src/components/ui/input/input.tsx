@@ -13,23 +13,34 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <input
         ref={ref}
         className={cn(
-          [
-            "flex h-10 w-full rounded-md border",
-            "bg-[var(--color-surface)]",
-            "px-3 py-2 text-sm",
-            "text-[var(--color-text)]",
-            "placeholder:text-[var(--color-text-3)]",
-            "transition-all duration-200",
-            "focus:outline-none focus:ring-2",
-            "disabled:cursor-not-allowed disabled:opacity-50",
-          ].join(" "),
+  "flex w-full rounded-md",
+  "border border-[var(--color-border-2)]",
 
-          error
-            ? "border-[var(--color-danger)]"
-            : "border-[var(--color-border)]",
+  "bg-[var(--color-surface-2)]",
 
-          className
-        )}
+  "px-3 py-2",
+  "text-sm text-[var(--color-text)]",
+
+  "placeholder:text-[var(--color-text-3)]",
+
+  "transition-all duration-200",
+
+  "focus:outline-none",
+  "focus:ring-2",
+  "focus:ring-[var(--color-primary-dim-2)]",
+  "focus:border-[var(--color-primary)]",
+
+  "hover:border-[var(--color-primary)]",
+
+  "disabled:cursor-not-allowed",
+  "disabled:opacity-50",
+
+  "h-10",
+
+  error && "border-[var(--color-danger)]",
+
+  className
+)}
         {...props}
       />
     );

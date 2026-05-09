@@ -60,3 +60,15 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+export const Loading: Story = {
+  args: {
+    children: "Loading...",
+    loading: true,
+  },
+};
+
+export const WithIcon: Story = {
+  args: {
+    children: "Save Changes",
+  },
+};

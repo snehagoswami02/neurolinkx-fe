@@ -1,21 +1,34 @@
 "use client";
 
-import { Bell, Search } from "lucide-react";
+import { Bell, Menu, Search } from "lucide-react";
 
-export function Topbar() {
+type TopbarProps = {
+  onMenuClick: () => void;
+};
+
+export function Topbar({ onMenuClick }: TopbarProps) {
   return (
     <header className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-200 bg-white px-6 py-4">
-      <div className="relative w-full max-w-md">
-        <Search
-          size={18}
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-        />
+      <div className="flex items-center gap-4">
+        <button
+          onClick={onMenuClick}
+          className="rounded-xl p-2 hover:bg-gray-100 lg:hidden"
+        >
+          <Menu size={22} />
+        </button>
 
-        <input
-          type="text"
-          placeholder="Search..."
-          className="w-full rounded-xl border border-gray-200 bg-gray-50 py-2 pl-10 pr-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white"
-        />
+        <div className="relative hidden w-full max-w-md sm:block">
+          <Search
+            size={18}
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+          />
+
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full rounded-xl border border-gray-200 bg-gray-50 py-2 pl-10 pr-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white"
+          />
+        </div>
       </div>
 
       <div className="ml-6 flex items-center gap-4">

@@ -2,7 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, BarChart3, Users, Settings } from "lucide-react";
+import {
+  LayoutDashboard,
+  BarChart3,
+  Users,
+  Settings,
+} from "lucide-react";
 
 const navItems = [
   {
@@ -27,17 +32,27 @@ const navItems = [
   },
 ];
 
-export function Sidebar() {
+type SidebarProps = {
+  isOpen: boolean;
+};
+
+export function Sidebar({ isOpen }: SidebarProps) {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden w-64 flex-col border-r border-gray-200 bg-white lg:flex">
+    <aside
+      className={`fixed inset-y-0 left-0 z-40 w-64 transform border-r border-gray-200 bg-white transition-transform duration-300 lg:static lg:translate-x-0 ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      }`}
+    >
       <div className="border-b border-gray-200 p-6">
         <h1 className="text-2xl font-bold tracking-tight text-gray-900">
           NeuroLinkX
         </h1>
 
-        <p className="mt-1 text-sm text-gray-500">Admin Dashboard</p>
+        <p className="mt-1 text-sm text-gray-500">
+          Admin Dashboard
+        </p>
       </div>
 
       <nav className="flex-1 space-y-2 p-4">
@@ -56,6 +71,7 @@ export function Sidebar() {
               }`}
             >
               <Icon size={18} />
+
               {item.label}
             </Link>
           );

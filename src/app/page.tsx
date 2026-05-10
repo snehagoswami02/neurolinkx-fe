@@ -8,28 +8,23 @@ import { Switch } from "@/components/ui/switch";
 import { Modal } from "@/components/ui/modal";
 import { Button } from "@/components/ui/button";
 import { showToast } from "@/components/ui/toast";
+import { CommandPalette } from "@/components/ui/command-palette";
 import * as React from "react";
 
 
 export default function Home() {
-    return (
-    <main className="min-h-screen p-10 flex gap-4">
-      <Button
-        onClick={() =>
-          showToast.success("Shipment updated successfully")
-        }
-      >
-        Success Toast
+    const [open, setOpen] = React.useState(false);
+
+  return (
+    <main className="min-h-screen p-10">
+      <Button onClick={() => setOpen(true)}>
+        Open Command Palette
       </Button>
 
-      <Button
-        variant="danger"
-        onClick={() =>
-          showToast.error("Failed to update shipment")
-        }
-      >
-        Error Toast
-      </Button>
+      <CommandPalette
+        open={open}
+        onOpenChange={setOpen}
+      />
     </main>
   );
 }

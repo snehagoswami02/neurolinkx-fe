@@ -1,17 +1,17 @@
 import { Input } from "@/components/ui/input";
 import { FormField } from "@/components/ui/form-feild";
-
+import { Textarea } from "@/components/ui/text area";
 export default function Home() {
-  return (
+   return (
     <main className="min-h-screen p-10">
       <div className="max-w-md">
         <FormField
-          label="Email"
-          helperText="We'll never share your email."
+          label="Message"
+          helperText="Write a short note."
         >
-          <Input placeholder="Enter your email" />
+          <Textarea placeholder="Enter your message..." />
         </FormField>
       </div>
     </main>
-  );
+   );
 }

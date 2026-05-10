@@ -11,11 +11,13 @@ export interface CheckboxProps
 
 const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   ({ className, label, error = false, id, disabled, ...props }, ref) => {
-    const checkboxId = id ?? React.useId();
+    const checkboxId = React.useId();
+    const resolvedId = id ?? checkboxId;
 
     return (
       <label
-        htmlFor={checkboxId}
+        htmlFor={resolvedId}
+        id ={resolvedId}
         className={cn(
           "inline-flex items-center gap-2 text-sm text-[var(--color-text)]",
           disabled && "cursor-not-allowed opacity-50",

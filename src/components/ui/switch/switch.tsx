@@ -10,7 +10,8 @@ export interface SwitchProps
 
 const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
   ({ className, label, error = false, id, disabled, ...props }, ref) => {
-    const switchId = id ?? React.useId();
+    const generatedId = React.useId();
+    const switchId = id ?? generatedId;
 
     return (
       <label

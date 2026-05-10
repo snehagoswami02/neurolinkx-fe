@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NeuroLinkX Design System
 
-## Getting Started
+A scalable frontend component library built with Next.js, TypeScript, Tailwind CSS, Storybook, and TanStack Table.
 
-First, run the development server:
+This project focuses on reusable UI architecture, accessibility, component documentation, and scalable frontend engineering patterns.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Reusable UI component library
+- Token-based design system
+- Dark theme architecture
+- Storybook component documentation
+- Accessible interactive components
+- Responsive layouts
+- Scalable TypeScript architecture
+- Keyboard shortcut support
+- Loading and empty states
+- Generic DataTable implementation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- Next.js 15
+- TypeScript
+- Tailwind CSS v4
+- Storybook
+- TanStack Table
+- Sonner
+- cmdk
+- Lucide React
+- class-variance-authority
+- clsx
+- tailwind-merge
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Folder Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+src/
+├── app/
+├── components/
+│   └── ui/
+├── lib/
+├── styles/
+└── stories/
 
-## Deploy on Vercel
+## Screenshots
+### Storybook
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Storybook](public/screenshots/storybook.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Modal Component
+
+![Modal](public/screenshots/modal.png)
+
+### DataTable
+
+![DataTable](public/screenshots/table.png)
+
+### Command Palette
+
+![Command Palette](public/screenshots/command-palette.png)
+
+## Design System Philosophy
+
+The component library was built with a focus on:
+
+- scalability
+- reusability
+- accessibility
+- consistent UI patterns
+- token-based styling
+- isolated component development using Storybook
+
+All components consume centralized design tokens instead of hardcoded values.
+
+## Engineering Decisions
+
+### Why Storybook?
+Storybook enables isolated component development, documentation, and interaction testing.
+
+### Why Design Tokens?
+Design tokens ensure consistency across the entire UI system while simplifying theming and scalability.
+
+### Why TanStack Table?
+TanStack Table provides scalable and highly customizable table architecture for enterprise-grade data grids.
+
+### Why cmdk?
+cmdk enables accessible command palette interactions with keyboard-first UX patterns.
+
+## Component Status
+
+| Component | Status |
+|---|---|
+| Button | ✅ |
+| Input | ✅ |
+| Textarea | ✅ |
+| Select | ✅ |
+| Checkbox | ✅ |
+| Switch | ✅ |
+| Modal | ✅ |
+| Toast | ✅ |
+| Command Palette | ✅ |
+| DataTable | ✅ |
+
+## Accessibility Features
+
+- Keyboard-accessible components
+- Focus-visible states
+- ESC key modal dismissal
+- Cmd/Ctrl + K command palette support
+- Semantic form labels
+- Disabled interaction states
+
+  ## Future Scope
+
+- Theme switcher
+- Virtualized tables
+- Drag-and-drop support
+- Unit testing
+- Form validation with Zod + React Hook Form
+- Animation system standardization
+
+  ## Architecture Notes
+
+The project follows a scalable component-first architecture:
+
+- isolated UI components
+- shared utility functions
+- centralized design tokens
+- reusable interaction patterns
+- Storybook-driven development workflow

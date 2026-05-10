@@ -1,4 +1,5 @@
 import { DashboardLayout } from "@/components/dashboard/DashboardLayout";
+import { AnalyticsChart } from "@/components/dashboard/AnalyticsChart";
 
 export default function AnalyticsPage() {
   return (
@@ -19,9 +20,7 @@ export default function AnalyticsPage() {
             Analytics Overview
           </h2>
 
-          <div className="mt-6 flex h-80 items-center justify-center rounded-xl bg-gray-50 text-sm text-gray-400">
-            Analytics chart section
-          </div>
+          <AnalyticsChart />
         </div>
       </div>
     </DashboardLayout>

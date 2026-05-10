@@ -1,31 +1,31 @@
 "use client";
 
 import {
+  ResponsiveContainer,
   LineChart,
   Line,
   XAxis,
   Tooltip,
-  ResponsiveContainer,
   CartesianGrid,
 } from "recharts";
 
 const data = [
-  { name: "Jan", users: 400 },
-  { name: "Feb", users: 700 },
-  { name: "Mar", users: 500 },
-  { name: "Apr", users: 900 },
-  { name: "May", users: 1200 },
-  { name: "Jun", users: 1000 },
+  { month: "Jan", users: 400 },
+  { month: "Feb", users: 700 },
+  { month: "Mar", users: 500 },
+  { month: "Apr", users: 900 },
+  { month: "May", users: 1200 },
+  { month: "Jun", users: 1000 },
 ];
 
 export function AnalyticsChart() {
   return (
-    <div className="h-72 w-full">
+    <div className="h-80 w-full">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
 
-          <XAxis dataKey="name" />
+          <XAxis dataKey="month" />
 
           <Tooltip />
 

@@ -26,10 +26,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   "transition-all duration-200",
 
   "focus:outline-none",
-  "focus:ring-2",
-  "focus:ring-[var(--color-primary-dim-2)]",
-  "focus:border-[var(--color-primary)]",
-
+  "focus:ring-2", 
+ "focus:border-[var(--color-primary)]",
+  "focus:shadow-[0_0_0_3px_rgba(0,229,182,0.15)]",
   "hover:border-[var(--color-primary)]",
 
   "disabled:cursor-not-allowed",

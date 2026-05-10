@@ -30,7 +30,7 @@
   /* ── Colour: Surface (dark mode — default) ──────────────── */
   --color-bg:              #0a0f1a;
   --color-surface:         #111827;
-  --color-surface-2:       #1a2235;
+  --color-surface-2:       #131d30;
 
   /* ── Colour: Text ───────────────────────────────────────── */
   --color-text:            #f0f4ff;
@@ -39,7 +39,7 @@
 
   /* ── Colour: Border ─────────────────────────────────────── */
   --color-border:          rgba(0, 229, 182, 0.15);
-  --color-border-2:        rgba(0, 229, 182, 0.30);
+  --color-border-2:        rgba(0, 229, 182, 0.45);
 
   /* ── Typography ─────────────────────────────────────────── */
   --font-sans:             'DM Sans', 'Segoe UI', system-ui, sans-serif;
